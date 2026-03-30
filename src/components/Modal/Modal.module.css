@@ -1,0 +1,27 @@
+.backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.15s ease;
+}
+.dialog {
+  background: #fff; border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  display: flex; flex-direction: column;
+  max-height: 90vh;
+  animation: slideUp 0.2s ease;
+  outline: none;
+}
+.sm { width: min(400px, 92vw); }
+.md { width: min(560px, 92vw); }
+.lg { width: min(800px, 92vw); }
+.xl { width: min(1100px, 92vw); }
+.header { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; border-bottom: 1px solid #e9ecef; }
+.title { font-size: 1.125rem; font-weight: 700; color: #212529; margin: 0; }
+.closeBtn { background: none; border: none; font-size: 1.5rem; line-height: 1; color: #6c757d; cursor: pointer; padding: 0.25rem; border-radius: 4px; transition: color 0.15s; }
+.closeBtn:hover { color: #212529; }
+.body { padding: 1.5rem; overflow-y: auto; flex: 1; }
+.footer { padding: 1rem 1.5rem; border-top: 1px solid #e9ecef; display: flex; gap: 0.5rem; justify-content: flex-end; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(24px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
